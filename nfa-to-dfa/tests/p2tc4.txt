@@ -1,0 +1,8 @@
+4
+1
+2 3
+1a2 2e1 1b3 3b1 2b1 1a2 3e4 4b3
+ab
+b
+aabbb
+bbba
