@@ -11,7 +11,7 @@
 This Java application creates an NFA given a set of states and transitions and 
 an alphabet, and returns a DFA.
 
---
+---
 
 ## Compiling and Using
 
