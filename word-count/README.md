@@ -1,15 +1,15 @@
-#Project 2: Word Count
-###Author: Noah Rudin
-###Class: CS253 Section 2
+# Project 2: Word Count
+### Author: Noah Rudin
+### Class: CS253 Section 2
 
 ---
 
-#OVERVIEW:
+# OVERVIEW:
 This program is intended to take in a text file, parse the file, and count the number of chars, words, lines, and instances of digits 0-9. The number of matches in a file to a user-designated word (given in the command line) is also displayed.
 
 ---
 
-#COMPILING AND USING:
+# COMPILING AND USING:
 - To compile and run the word match code, after creating the executable, type "./wc-match -m 'word query' < 'input file'", in which word query is the desired word to be matched and input file is the text to parse.
 
 - To output the results to be printed in the console to a text file, type `./wc-match -m 'word query' < 'input file' > 'output file'`, in which output file is the name of the file in which the console display is written. "input" has been provided for you which reads "Hello there, I am a sample file."
