@@ -1,0 +1,39 @@
+\begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Filename }&{\bf Description  }\\\cline{1-2}
+C\-O\-N\-N\-E\-C\-T.\-md &This file \\\cline{1-2}
+doxygen-\/config &Sample config file for doxygen \\\cline{1-2}
+Makefile &$\ast$$\ast$\-Incomplete$\ast$$\ast$ build file for the mydash project (adapt to your needs) \\\cline{1-2}
+Test\-Cases &An incomplete list of test cases \\\cline{1-2}
+valgrind.\-supp &Example suppression file for valgrind for the readline library \\\cline{1-2}
+mydash-\/src/\-Makefile &Build file for mydash (adapt to your needs) \\\cline{1-2}
+\hyperlink{mydash-src_2mydash_8c}{mydash-\/src/mydash.\-c} &Starter version of mydash.\-c \\\cline{1-2}
+\hyperlink{error_8c}{mydash-\/src/error.\-c} &Error handling code used in class examples \\\cline{1-2}
+\hyperlink{mydash-src_2mydash_8h}{mydash-\/src/mydash.\-h} &Header file for the mydash project \\\cline{1-2}
+\hyperlink{test-readline_8c}{other-\/progs/test-\/readline.\-c}&Example file on how to use auto completion with readline library \\\cline{1-2}
+\hyperlink{loop_8c}{other-\/progs/loop.\-c} &Simple infinite loop program for testing purposes \\\cline{1-2}
+other-\/progs/\-Makefile &Makefile to build other program examples \\\cline{1-2}
+backpack.\-sh &grading script for ehckpoint \\\cline{1-2}
+checkpoint-\/testfiles &folder containg test files for checkpoint \\\cline{1-2}
+p1-\/checkpoint-\/rubric.\-txt &rubric for checkpoint \\\cline{1-2}
+p1-\/rubric.\-txt &rubric for overall p1 project \\\cline{1-2}
+\end{TabularC}
+\subsection*{Readline }
+
+See example file \hyperlink{test-readline_8c}{other-\/progs/test-\/readline.\-c}.
+
+\subsection*{Valgrind }
+
+Use valgrind as follows
+
+valgrind --leak-\/check=yes --suppressions=valgrind.\-supp dash
+
+You will need the suppression file valgrind.\-supp that suppresses errors from the readline library so you can focus on issues emanating from your code.
+
+\subsection*{Documentation }
+
+Generate documentation using doxygen tool. Use
+
+make dox
+
+to trigger doxygen. Use the sample doxygen-\/config file for using with your project. Note that, just like javadocs, you can use any H\-T\-M\-L tags in your comments. All javadoc tags and comments are supported by doxygen. 

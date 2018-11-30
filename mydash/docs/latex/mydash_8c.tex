@@ -1,0 +1,113 @@
+\hypertarget{mydash_8c}{\section{mydash-\/src/mydash.c File Reference}
+\label{mydash_8c}\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}}
+}
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$sys/wait.\-h$>$}\\*
+{\ttfamily \#include $<$mydash.\-h$>$}\\*
+{\ttfamily \#include $<$readline/readline.\-h$>$}\\*
+{\ttfamily \#include $<$readline/history.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{mydash_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{mydash_8c_a9f3589a99a0fe576e1fd236a0dbd67d0}{is\-Empty} (char $\ast$in)
+\item 
+void \hyperlink{mydash_8c_a8070c861fa00e8a2ab6163d53891a423}{clear\-Function} (char $\ast$$\ast$argv, int \hyperlink{mydash_8c_a8832acb23dd24a56c5537ed361997a5e}{token\-Count})
+\item 
+void \hyperlink{mydash_8c_a04875a06e928a8a19dbc3fee32a64a61}{git\-\_\-args} (int argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{mydash_8c_af908947a7d7a234637bfcdb9b1237bd5}{parse} (char $\ast$in, int max, char $\ast$args\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{mydash_8c_ae1f2f5b30ec2fd68949971d2ea9a822b}{run} (char $\ast$$\ast$argv)
+\item 
+void \hyperlink{mydash_8c_ae2b1888e43147291a251c600e11a7494}{change\-Dir} (char $\ast$$\ast$argv, char $\ast$cwd)
+\item 
+void \hyperlink{mydash_8c_ae0e067fd1a1dd48fa6567257e02a8c71}{run\-Exit} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{mydash_8c_a8832acb23dd24a56c5537ed361997a5e}{token\-Count}
+\item 
+char $\ast$ \hyperlink{mydash_8c_a8adb30f4f6669f927fd9232f686c637b}{line}
+\item 
+int \hyperlink{mydash_8c_a93cae2015bf550c1ab981d546ffd3d19}{line\-Length} = \hyperlink{mydash_8h_a3e937c42922f7601edb17b747602c471}{M\-A\-X\-L\-I\-N\-E}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{mydash_8c_ae2b1888e43147291a251c600e11a7494}{\index{mydash.\-c@{mydash.\-c}!change\-Dir@{change\-Dir}}
+\index{change\-Dir@{change\-Dir}!mydash.c@{mydash.\-c}}
+\subsubsection[{change\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}void change\-Dir (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{char $\ast$}]{cwd}
+\end{DoxyParamCaption}
+)}}\label{mydash_8c_ae2b1888e43147291a251c600e11a7494}
+\hypertarget{mydash_8c_a8070c861fa00e8a2ab6163d53891a423}{\index{mydash.\-c@{mydash.\-c}!clear\-Function@{clear\-Function}}
+\index{clear\-Function@{clear\-Function}!mydash.c@{mydash.\-c}}
+\subsubsection[{clear\-Function}]{\setlength{\rightskip}{0pt plus 5cm}void clear\-Function (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{int}]{token\-Count}
+\end{DoxyParamCaption}
+)}}\label{mydash_8c_a8070c861fa00e8a2ab6163d53891a423}
+\hypertarget{mydash_8c_a04875a06e928a8a19dbc3fee32a64a61}{\index{mydash.\-c@{mydash.\-c}!git\-\_\-args@{git\-\_\-args}}
+\index{git\-\_\-args@{git\-\_\-args}!mydash.c@{mydash.\-c}}
+\subsubsection[{git\-\_\-args}]{\setlength{\rightskip}{0pt plus 5cm}void git\-\_\-args (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{mydash_8c_a04875a06e928a8a19dbc3fee32a64a61}
+\hypertarget{mydash_8c_a9f3589a99a0fe576e1fd236a0dbd67d0}{\index{mydash.\-c@{mydash.\-c}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!mydash.c@{mydash.\-c}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Empty (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in}
+\end{DoxyParamCaption}
+)}}\label{mydash_8c_a9f3589a99a0fe576e1fd236a0dbd67d0}
+\hypertarget{mydash_8c_a3c04138a5bfe5d72780bb7e82a18e627}{\index{mydash.\-c@{mydash.\-c}!main@{main}}
+\index{main@{main}!mydash.c@{mydash.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{mydash_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+\hypertarget{mydash_8c_af908947a7d7a234637bfcdb9b1237bd5}{\index{mydash.\-c@{mydash.\-c}!parse@{parse}}
+\index{parse@{parse}!mydash.c@{mydash.\-c}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void parse (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in, }
+\item[{int}]{max, }
+\item[{char $\ast$}]{args\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{mydash_8c_af908947a7d7a234637bfcdb9b1237bd5}
+\hypertarget{mydash_8c_ae1f2f5b30ec2fd68949971d2ea9a822b}{\index{mydash.\-c@{mydash.\-c}!run@{run}}
+\index{run@{run}!mydash.c@{mydash.\-c}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void run (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{mydash_8c_ae1f2f5b30ec2fd68949971d2ea9a822b}
+\hypertarget{mydash_8c_ae0e067fd1a1dd48fa6567257e02a8c71}{\index{mydash.\-c@{mydash.\-c}!run\-Exit@{run\-Exit}}
+\index{run\-Exit@{run\-Exit}!mydash.c@{mydash.\-c}}
+\subsubsection[{run\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}void run\-Exit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{mydash_8c_ae0e067fd1a1dd48fa6567257e02a8c71}
+
+
+\subsection{Variable Documentation}
+\hypertarget{mydash_8c_a8adb30f4f6669f927fd9232f686c637b}{\index{mydash.\-c@{mydash.\-c}!line@{line}}
+\index{line@{line}!mydash.c@{mydash.\-c}}
+\subsubsection[{line}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ line}}\label{mydash_8c_a8adb30f4f6669f927fd9232f686c637b}
+\hypertarget{mydash_8c_a93cae2015bf550c1ab981d546ffd3d19}{\index{mydash.\-c@{mydash.\-c}!line\-Length@{line\-Length}}
+\index{line\-Length@{line\-Length}!mydash.c@{mydash.\-c}}
+\subsubsection[{line\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int line\-Length = {\bf M\-A\-X\-L\-I\-N\-E}}}\label{mydash_8c_a93cae2015bf550c1ab981d546ffd3d19}
+\hypertarget{mydash_8c_a8832acb23dd24a56c5537ed361997a5e}{\index{mydash.\-c@{mydash.\-c}!token\-Count@{token\-Count}}
+\index{token\-Count@{token\-Count}!mydash.c@{mydash.\-c}}
+\subsubsection[{token\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int token\-Count}}\label{mydash_8c_a8832acb23dd24a56c5537ed361997a5e}

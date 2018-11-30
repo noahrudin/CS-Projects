@@ -1,0 +1,37 @@
+\hypertarget{parsing_8c}{\section{mydash-\/src/parsing.c File Reference}
+\label{parsing_8c}\index{mydash-\/src/parsing.\-c@{mydash-\/src/parsing.\-c}}
+}
+{\ttfamily \#include $<$mydash.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$$\ast$ \hyperlink{parsing_8c_ad9906809ff4d9f1d6b583a57c7757578}{parse\-Input} (char $\ast$s, char $\ast$delimiter, int $\ast$num\-Tokens)
+\begin{DoxyCompactList}\small\item\em Parse a given string into tokens using provide delimiters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{parsing_8c_ad9906809ff4d9f1d6b583a57c7757578}{\index{parsing.\-c@{parsing.\-c}!parse\-Input@{parse\-Input}}
+\index{parse\-Input@{parse\-Input}!parsing.c@{parsing.\-c}}
+\subsubsection[{parse\-Input}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ parse\-Input (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{char $\ast$}]{delimiter, }
+\item[{int $\ast$}]{num\-Tokens}
+\end{DoxyParamCaption}
+)}}\label{parsing_8c_ad9906809ff4d9f1d6b583a57c7757578}
+
+
+Parse a given string into tokens using provide delimiters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the string to parse \\
+\hline
+{\em delimiter} & a string of delimiters to use for tokenizing \\
+\hline
+{\em num\-Tokens} & updates to number of toeksn found in the input string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to an array of tokens that must be freed by the caller 
+\end{DoxyReturn}

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "934722548197",
+    "firebase_url": "https://shuttlecompanion.firebaseio.com",
+    "project_id": "shuttlecompanion",
+    "storage_bucket": "shuttlecompanion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934722548197:android:3ea5d31bf8b9bd84",
+        "android_client_info": {
+          "package_name": "com.noahrudin.shuttlecompanion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934722548197-06ld7mehkp8kf1mk96g75r3n89oq1lma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.noahrudin.shuttlecompanion",
+            "certificate_hash": "c77f1b04d30adc919c8b522eb2d86d787ed49c46"
+          }
+        },
+        {
+          "client_id": "934722548197-tpocq8eadqg6h3iig4oqll1ducdpjvoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWe3l_e-4tZewUecJbZhAug92VUPEV8KA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934722548197-tpocq8eadqg6h3iig4oqll1ducdpjvoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

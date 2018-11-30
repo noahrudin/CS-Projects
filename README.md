@@ -2,6 +2,8 @@
 
 
 ### Manifest
-- ring-buffer: Thread-Safe Ring Buffer Project
 - merge-sort: Thread-Safe Mergesort Algorithm
+- ring-buffer: Thread-Safe Ring Buffer Project
+- word-count: Word Counter and String Match Program
+
 

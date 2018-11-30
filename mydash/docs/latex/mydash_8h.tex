@@ -1,0 +1,205 @@
+\hypertarget{mydash_8h}{\section{mydash-\/src/mydash.h File Reference}
+\label{mydash_8h}\index{mydash-\/src/mydash.\-h@{mydash-\/src/mydash.\-h}}
+}
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$sysexits.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mydash_8h_a3e937c42922f7601edb17b747602c471}{M\-A\-X\-L\-I\-N\-E}~4096			/$\ast$ max \hyperlink{mydash_8c_a8adb30f4f6669f927fd9232f686c637b}{line} length $\ast$/
+\item 
+\#define \hyperlink{mydash_8h_a7a9a231e30b47bc0345749c8bd1e5077}{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}~1024			/$\ast$ parsing constants and prototypes $\ast$/
+\item 
+\#define \hyperlink{mydash_8h_a09886d6ba96e67553bf3c49ed8ade975}{M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S}~2048
+\item 
+\#define \hyperlink{mydash_8h_a29b7451465deac204c5f7cb1f9c6e1fc}{M\-A\-X\-\_\-\-A\-R\-G\-S}~1024
+\item 
+\#define \hyperlink{mydash_8h_a0156511b6afae79b47bfbbe7398c0ab5}{F\-I\-L\-E\-\_\-\-M\-O\-D\-E}~(S\-\_\-\-I\-R\-U\-S\-R $|$ S\-\_\-\-I\-W\-U\-S\-R $|$ S\-\_\-\-I\-R\-G\-R\-P $|$ S\-\_\-\-I\-R\-O\-T\-H)
+\item 
+\#define \hyperlink{mydash_8h_a2fb2887e798c593bd4528b8daad75212}{D\-I\-R\-\_\-\-M\-O\-D\-E}~(\hyperlink{mydash_8h_a0156511b6afae79b47bfbbe7398c0ab5}{F\-I\-L\-E\-\_\-\-M\-O\-D\-E} $|$ S\-\_\-\-I\-X\-U\-S\-R $|$ S\-\_\-\-I\-X\-G\-R\-P $|$ S\-\_\-\-I\-X\-O\-T\-H)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{mydash_8h_ae1f2f5b30ec2fd68949971d2ea9a822b}{run} (char $\ast$$\ast$argv)
+\item 
+void \hyperlink{mydash_8h_ae0e067fd1a1dd48fa6567257e02a8c71}{run\-Exit} (void)
+\item 
+void \hyperlink{mydash_8h_ae972fb577c9011a23f74759956054411}{parse} (char $\ast$input, int max, char $\ast$args\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{mydash_8h_ae2b1888e43147291a251c600e11a7494}{change\-Dir} (char $\ast$$\ast$argv, char $\ast$cwd)
+\item 
+void \hyperlink{mydash_8h_a16422a7428ed046d4847c0795e3dd1a0}{clear\-Function} (char $\ast$$\ast$argv, int num\-Tokens)
+\item 
+int \hyperlink{mydash_8h_a268557de76870c2df687388aa23528cd}{is\-Empty} (char $\ast$input)
+\item 
+void \hyperlink{mydash_8h_a04875a06e928a8a19dbc3fee32a64a61}{git\-\_\-args} (int argc, char $\ast$$\ast$argv)
+\item 
+const char $\ast$ \hyperlink{mydash_8h_aae6486f29a77bc5e565d66351c027c1a}{git\-\_\-version} (void)
+\item 
+void \hyperlink{mydash_8h_a7149c6edbf0dd6d1da7f786d62133d16}{err\-\_\-dump} (const char $\ast$,...)
+\item 
+void \hyperlink{mydash_8h_a5527eeda10156ad7dd2e3dbb92fa70dd}{err\-\_\-msg} (const char $\ast$,...)
+\item 
+void \hyperlink{mydash_8h_a856c1e55e117fb3d1488ca121ef7f9c6}{err\-\_\-quit} (const char $\ast$,...)
+\item 
+void \hyperlink{mydash_8h_a98255ebf2a46056076b0ab6e86e39d37}{err\-\_\-ret} (const char $\ast$,...)
+\item 
+void \hyperlink{mydash_8h_a6c692d7c47e9845a3b8ac557d9edb3bd}{err\-\_\-sys} (const char $\ast$,...)
+\item 
+char $\ast$$\ast$ \hyperlink{mydash_8h_ad9906809ff4d9f1d6b583a57c7757578}{parse\-Input} (char $\ast$s, char $\ast$delimiter, int $\ast$num\-Tokens)
+\begin{DoxyCompactList}\small\item\em Parse a given string into tokens using provide delimiters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{mydash_8h_a2fb2887e798c593bd4528b8daad75212}{\index{mydash.\-h@{mydash.\-h}!D\-I\-R\-\_\-\-M\-O\-D\-E@{D\-I\-R\-\_\-\-M\-O\-D\-E}}
+\index{D\-I\-R\-\_\-\-M\-O\-D\-E@{D\-I\-R\-\_\-\-M\-O\-D\-E}!mydash.h@{mydash.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-M\-O\-D\-E~({\bf F\-I\-L\-E\-\_\-\-M\-O\-D\-E} $|$ S\-\_\-\-I\-X\-U\-S\-R $|$ S\-\_\-\-I\-X\-G\-R\-P $|$ S\-\_\-\-I\-X\-O\-T\-H)}}\label{mydash_8h_a2fb2887e798c593bd4528b8daad75212}
+\hypertarget{mydash_8h_a0156511b6afae79b47bfbbe7398c0ab5}{\index{mydash.\-h@{mydash.\-h}!F\-I\-L\-E\-\_\-\-M\-O\-D\-E@{F\-I\-L\-E\-\_\-\-M\-O\-D\-E}}
+\index{F\-I\-L\-E\-\_\-\-M\-O\-D\-E@{F\-I\-L\-E\-\_\-\-M\-O\-D\-E}!mydash.h@{mydash.\-h}}
+\subsubsection[{F\-I\-L\-E\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-I\-L\-E\-\_\-\-M\-O\-D\-E~(S\-\_\-\-I\-R\-U\-S\-R $|$ S\-\_\-\-I\-W\-U\-S\-R $|$ S\-\_\-\-I\-R\-G\-R\-P $|$ S\-\_\-\-I\-R\-O\-T\-H)}}\label{mydash_8h_a0156511b6afae79b47bfbbe7398c0ab5}
+\hypertarget{mydash_8h_a29b7451465deac204c5f7cb1f9c6e1fc}{\index{mydash.\-h@{mydash.\-h}!M\-A\-X\-\_\-\-A\-R\-G\-S@{M\-A\-X\-\_\-\-A\-R\-G\-S}}
+\index{M\-A\-X\-\_\-\-A\-R\-G\-S@{M\-A\-X\-\_\-\-A\-R\-G\-S}!mydash.h@{mydash.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-A\-R\-G\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-A\-R\-G\-S~1024}}\label{mydash_8h_a29b7451465deac204c5f7cb1f9c6e1fc}
+\hypertarget{mydash_8h_a7a9a231e30b47bc0345749c8bd1e5077}{\index{mydash.\-h@{mydash.\-h}!M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}!mydash.h@{mydash.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H~1024			/$\ast$ parsing constants and prototypes $\ast$/}}\label{mydash_8h_a7a9a231e30b47bc0345749c8bd1e5077}
+\hypertarget{mydash_8h_a09886d6ba96e67553bf3c49ed8ade975}{\index{mydash.\-h@{mydash.\-h}!M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S@{M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S}}
+\index{M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S@{M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S}!mydash.h@{mydash.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S~2048}}\label{mydash_8h_a09886d6ba96e67553bf3c49ed8ade975}
+\hypertarget{mydash_8h_a3e937c42922f7601edb17b747602c471}{\index{mydash.\-h@{mydash.\-h}!M\-A\-X\-L\-I\-N\-E@{M\-A\-X\-L\-I\-N\-E}}
+\index{M\-A\-X\-L\-I\-N\-E@{M\-A\-X\-L\-I\-N\-E}!mydash.h@{mydash.\-h}}
+\subsubsection[{M\-A\-X\-L\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-L\-I\-N\-E~4096			/$\ast$ max {\bf line} length $\ast$/}}\label{mydash_8h_a3e937c42922f7601edb17b747602c471}
+
+
+\subsection{Function Documentation}
+\hypertarget{mydash_8h_ae2b1888e43147291a251c600e11a7494}{\index{mydash.\-h@{mydash.\-h}!change\-Dir@{change\-Dir}}
+\index{change\-Dir@{change\-Dir}!mydash.h@{mydash.\-h}}
+\subsubsection[{change\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}void change\-Dir (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{char $\ast$}]{cwd}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_ae2b1888e43147291a251c600e11a7494}
+\hypertarget{mydash_8h_a16422a7428ed046d4847c0795e3dd1a0}{\index{mydash.\-h@{mydash.\-h}!clear\-Function@{clear\-Function}}
+\index{clear\-Function@{clear\-Function}!mydash.h@{mydash.\-h}}
+\subsubsection[{clear\-Function}]{\setlength{\rightskip}{0pt plus 5cm}void clear\-Function (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{int}]{num\-Tokens}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_a16422a7428ed046d4847c0795e3dd1a0}
+\hypertarget{mydash_8h_a7149c6edbf0dd6d1da7f786d62133d16}{\index{mydash.\-h@{mydash.\-h}!err\-\_\-dump@{err\-\_\-dump}}
+\index{err\-\_\-dump@{err\-\_\-dump}!mydash.h@{mydash.\-h}}
+\subsubsection[{err\-\_\-dump}]{\setlength{\rightskip}{0pt plus 5cm}void err\-\_\-dump (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_a7149c6edbf0dd6d1da7f786d62133d16}
+\hypertarget{mydash_8h_a5527eeda10156ad7dd2e3dbb92fa70dd}{\index{mydash.\-h@{mydash.\-h}!err\-\_\-msg@{err\-\_\-msg}}
+\index{err\-\_\-msg@{err\-\_\-msg}!mydash.h@{mydash.\-h}}
+\subsubsection[{err\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void err\-\_\-msg (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_a5527eeda10156ad7dd2e3dbb92fa70dd}
+\hypertarget{mydash_8h_a856c1e55e117fb3d1488ca121ef7f9c6}{\index{mydash.\-h@{mydash.\-h}!err\-\_\-quit@{err\-\_\-quit}}
+\index{err\-\_\-quit@{err\-\_\-quit}!mydash.h@{mydash.\-h}}
+\subsubsection[{err\-\_\-quit}]{\setlength{\rightskip}{0pt plus 5cm}void err\-\_\-quit (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_a856c1e55e117fb3d1488ca121ef7f9c6}
+\hypertarget{mydash_8h_a98255ebf2a46056076b0ab6e86e39d37}{\index{mydash.\-h@{mydash.\-h}!err\-\_\-ret@{err\-\_\-ret}}
+\index{err\-\_\-ret@{err\-\_\-ret}!mydash.h@{mydash.\-h}}
+\subsubsection[{err\-\_\-ret}]{\setlength{\rightskip}{0pt plus 5cm}void err\-\_\-ret (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_a98255ebf2a46056076b0ab6e86e39d37}
+\hypertarget{mydash_8h_a6c692d7c47e9845a3b8ac557d9edb3bd}{\index{mydash.\-h@{mydash.\-h}!err\-\_\-sys@{err\-\_\-sys}}
+\index{err\-\_\-sys@{err\-\_\-sys}!mydash.h@{mydash.\-h}}
+\subsubsection[{err\-\_\-sys}]{\setlength{\rightskip}{0pt plus 5cm}void err\-\_\-sys (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_a6c692d7c47e9845a3b8ac557d9edb3bd}
+\hypertarget{mydash_8h_a04875a06e928a8a19dbc3fee32a64a61}{\index{mydash.\-h@{mydash.\-h}!git\-\_\-args@{git\-\_\-args}}
+\index{git\-\_\-args@{git\-\_\-args}!mydash.h@{mydash.\-h}}
+\subsubsection[{git\-\_\-args}]{\setlength{\rightskip}{0pt plus 5cm}void git\-\_\-args (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_a04875a06e928a8a19dbc3fee32a64a61}
+\hypertarget{mydash_8h_aae6486f29a77bc5e565d66351c027c1a}{\index{mydash.\-h@{mydash.\-h}!git\-\_\-version@{git\-\_\-version}}
+\index{git\-\_\-version@{git\-\_\-version}!mydash.h@{mydash.\-h}}
+\subsubsection[{git\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ git\-\_\-version (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_aae6486f29a77bc5e565d66351c027c1a}
+\hypertarget{mydash_8h_a268557de76870c2df687388aa23528cd}{\index{mydash.\-h@{mydash.\-h}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!mydash.h@{mydash.\-h}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Empty (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_a268557de76870c2df687388aa23528cd}
+\hypertarget{mydash_8h_ae972fb577c9011a23f74759956054411}{\index{mydash.\-h@{mydash.\-h}!parse@{parse}}
+\index{parse@{parse}!mydash.h@{mydash.\-h}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void parse (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input, }
+\item[{int}]{max, }
+\item[{char $\ast$}]{args\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_ae972fb577c9011a23f74759956054411}
+\hypertarget{mydash_8h_ad9906809ff4d9f1d6b583a57c7757578}{\index{mydash.\-h@{mydash.\-h}!parse\-Input@{parse\-Input}}
+\index{parse\-Input@{parse\-Input}!mydash.h@{mydash.\-h}}
+\subsubsection[{parse\-Input}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ parse\-Input (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{char $\ast$}]{delimiter, }
+\item[{int $\ast$}]{num\-Tokens}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_ad9906809ff4d9f1d6b583a57c7757578}
+
+
+Parse a given string into tokens using provide delimiters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the string to parse \\
+\hline
+{\em delimiter} & a string of delimiters to use for tokenizing \\
+\hline
+{\em num\-Tokens} & updates to number of toeksn found in the input string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to an array of tokens that must be freed by the caller 
+\end{DoxyReturn}
+\hypertarget{mydash_8h_ae1f2f5b30ec2fd68949971d2ea9a822b}{\index{mydash.\-h@{mydash.\-h}!run@{run}}
+\index{run@{run}!mydash.h@{mydash.\-h}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void run (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_ae1f2f5b30ec2fd68949971d2ea9a822b}
+\hypertarget{mydash_8h_ae0e067fd1a1dd48fa6567257e02a8c71}{\index{mydash.\-h@{mydash.\-h}!run\-Exit@{run\-Exit}}
+\index{run\-Exit@{run\-Exit}!mydash.h@{mydash.\-h}}
+\subsubsection[{run\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}void run\-Exit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{mydash_8h_ae0e067fd1a1dd48fa6567257e02a8c71}

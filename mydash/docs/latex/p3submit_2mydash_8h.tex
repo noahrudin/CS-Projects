@@ -1,0 +1,308 @@
+\hypertarget{p3submit_2mydash_8h}{\section{p3submit/mydash.h File Reference}
+\label{p3submit_2mydash_8h}\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}}
+}
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$setjmp.\-h$>$}\\*
+{\ttfamily \#include $<$sysexits.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$pwd.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}../../list/include/\-Node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../list/include/\-List.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structjob}{job}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p3submit_2mydash_8h_a7a9a231e30b47bc0345749c8bd1e5077}{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}~1024
+\item 
+\#define \hyperlink{p3submit_2mydash_8h_a09886d6ba96e67553bf3c49ed8ade975}{M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S}~2048
+\item 
+\#define \hyperlink{p3submit_2mydash_8h_a3e937c42922f7601edb17b747602c471}{M\-A\-X\-L\-I\-N\-E}~4096
+\item 
+\#define \hyperlink{p3submit_2mydash_8h_a29b7451465deac204c5f7cb1f9c6e1fc}{M\-A\-X\-\_\-\-A\-R\-G\-S}~2048
+\item 
+\#define \hyperlink{p3submit_2mydash_8h_a0156511b6afae79b47bfbbe7398c0ab5}{F\-I\-L\-E\-\_\-\-M\-O\-D\-E}~(S\-\_\-\-I\-R\-U\-S\-R $|$ S\-\_\-\-I\-W\-U\-S\-R $|$ S\-\_\-\-I\-R\-G\-R\-P $|$ S\-\_\-\-I\-R\-O\-T\-H)
+\item 
+\#define \hyperlink{p3submit_2mydash_8h_a2fb2887e798c593bd4528b8daad75212}{D\-I\-R\-\_\-\-M\-O\-D\-E}~(\hyperlink{p3submit_2mydash_8h_a0156511b6afae79b47bfbbe7398c0ab5}{F\-I\-L\-E\-\_\-\-M\-O\-D\-E} $|$ S\-\_\-\-I\-X\-U\-S\-R $|$ S\-\_\-\-I\-X\-G\-R\-P $|$ S\-\_\-\-I\-X\-O\-T\-H)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p3submit_2mydash_8h_a0c88efa38e3ca069ad715ac5fbb7baed}{run\-Built\-Ins} (char $\ast$$\ast$argv, struct list $\ast$\hyperlink{p3submit_2mydash_8c_a7fbf7d423751525b8391d5e19d2f77d4}{jobs}, struct passwd $\ast$pwuid)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a80dc57d5db2a940022eeae60452339ee}{run} (char $\ast$$\ast$argv, char $\ast$input, struct list $\ast$\hyperlink{p3submit_2mydash_8c_a7fbf7d423751525b8391d5e19d2f77d4}{jobs}, int $\ast$background, int $\ast$next\-I\-D, pid\-\_\-t pg\-I\-D)
+\item 
+void \hyperlink{p3submit_2mydash_8h_ae23098c009c74791925468628dc98022}{print\-All\-Jobs} (int flag, struct list $\ast$\hyperlink{p3submit_2mydash_8c_a7fbf7d423751525b8391d5e19d2f77d4}{jobs})
+\item 
+void \hyperlink{p3submit_2mydash_8h_ad435e875f9b06471147f018f4168bb11}{print\-Jobs} (int id, int pid, char $\ast$running, char $\ast$cmd)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a0d5c1d0102995d5cd6d2a494dc85f069}{change\-Dir} (struct passwd $\ast$pwuid, char $\ast$$\ast$argv, char $\ast$dir)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a69f1a01af1a62604f48ea00b42cdd2f2}{print\-History} (void)
+\item 
+int \hyperlink{p3submit_2mydash_8h_a0e33dae31e456526bb0649ec614424ba}{is\-Empty\-Command} (char $\ast$input)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a0c216e899ddb3dfbbaf8e261670cf80c}{remove\-White\-Space} (char $\ast$str)
+\item 
+int \hyperlink{p3submit_2mydash_8h_ace4d96293e7eb7775bbdf09ac251b327}{parse\-Ampersand} (char $\ast$in)
+\item 
+void \hyperlink{p3submit_2mydash_8h_aa2d345dda450a6fe9178fe7be1925dd6}{parse} (char $\ast$input, int $\ast$background, char $\ast$args\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{p3submit_2mydash_8h_a2318f5410e5b886031286df143719636}{version} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{p3submit_2mydash_8h_aa99a289bfe888ffce0d76d531146b6bf}{equals} (const void $\ast$obj, const void $\ast$other)
+\item 
+char $\ast$ \hyperlink{p3submit_2mydash_8h_a3c2b7655dfda066cd088c4f1016dd8f5}{to\-String} (const void $\ast$obj)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a5283309fc25706a60c6d38c80e315970}{free\-Object} (void $\ast$obj)
+\item 
+char $\ast$ \hyperlink{p3submit_2mydash_8h_a7d9f284c04008b2f6ba03da29c329b7d}{generate\-Prompt} (void)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a138f2c50e10d96e95ce6ea4281777227}{signal\-Handler} (int signo)
+\item 
+int \hyperlink{p3submit_2mydash_8h_a3202eb396cd2330f7da21b3e7a57015b}{sigsetjmp} (sigjmp\-\_\-buf env, int savemask)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a7149c6edbf0dd6d1da7f786d62133d16}{err\-\_\-dump} (const char $\ast$,...)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a5527eeda10156ad7dd2e3dbb92fa70dd}{err\-\_\-msg} (const char $\ast$,...)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a856c1e55e117fb3d1488ca121ef7f9c6}{err\-\_\-quit} (const char $\ast$,...)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a98255ebf2a46056076b0ab6e86e39d37}{err\-\_\-ret} (const char $\ast$,...)
+\item 
+void \hyperlink{p3submit_2mydash_8h_a6c692d7c47e9845a3b8ac557d9edb3bd}{err\-\_\-sys} (const char $\ast$,...)
+\item 
+char $\ast$$\ast$ \hyperlink{p3submit_2mydash_8h_ad9906809ff4d9f1d6b583a57c7757578}{parse\-Input} (char $\ast$s, char $\ast$delimiter, int $\ast$num\-Tokens)
+\begin{DoxyCompactList}\small\item\em Parse a given string into tokens using provide delimiters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p3submit_2mydash_8h_a2fb2887e798c593bd4528b8daad75212}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!D\-I\-R\-\_\-\-M\-O\-D\-E@{D\-I\-R\-\_\-\-M\-O\-D\-E}}
+\index{D\-I\-R\-\_\-\-M\-O\-D\-E@{D\-I\-R\-\_\-\-M\-O\-D\-E}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-M\-O\-D\-E~({\bf F\-I\-L\-E\-\_\-\-M\-O\-D\-E} $|$ S\-\_\-\-I\-X\-U\-S\-R $|$ S\-\_\-\-I\-X\-G\-R\-P $|$ S\-\_\-\-I\-X\-O\-T\-H)}}\label{p3submit_2mydash_8h_a2fb2887e798c593bd4528b8daad75212}
+\hypertarget{p3submit_2mydash_8h_a0156511b6afae79b47bfbbe7398c0ab5}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!F\-I\-L\-E\-\_\-\-M\-O\-D\-E@{F\-I\-L\-E\-\_\-\-M\-O\-D\-E}}
+\index{F\-I\-L\-E\-\_\-\-M\-O\-D\-E@{F\-I\-L\-E\-\_\-\-M\-O\-D\-E}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{F\-I\-L\-E\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-I\-L\-E\-\_\-\-M\-O\-D\-E~(S\-\_\-\-I\-R\-U\-S\-R $|$ S\-\_\-\-I\-W\-U\-S\-R $|$ S\-\_\-\-I\-R\-G\-R\-P $|$ S\-\_\-\-I\-R\-O\-T\-H)}}\label{p3submit_2mydash_8h_a0156511b6afae79b47bfbbe7398c0ab5}
+\hypertarget{p3submit_2mydash_8h_a29b7451465deac204c5f7cb1f9c6e1fc}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!M\-A\-X\-\_\-\-A\-R\-G\-S@{M\-A\-X\-\_\-\-A\-R\-G\-S}}
+\index{M\-A\-X\-\_\-\-A\-R\-G\-S@{M\-A\-X\-\_\-\-A\-R\-G\-S}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-A\-R\-G\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-A\-R\-G\-S~2048}}\label{p3submit_2mydash_8h_a29b7451465deac204c5f7cb1f9c6e1fc}
+\hypertarget{p3submit_2mydash_8h_a7a9a231e30b47bc0345749c8bd1e5077}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H~1024}}\label{p3submit_2mydash_8h_a7a9a231e30b47bc0345749c8bd1e5077}
+\hypertarget{p3submit_2mydash_8h_a09886d6ba96e67553bf3c49ed8ade975}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S@{M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S}}
+\index{M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S@{M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-T\-O\-K\-E\-N\-S~2048}}\label{p3submit_2mydash_8h_a09886d6ba96e67553bf3c49ed8ade975}
+\hypertarget{p3submit_2mydash_8h_a3e937c42922f7601edb17b747602c471}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!M\-A\-X\-L\-I\-N\-E@{M\-A\-X\-L\-I\-N\-E}}
+\index{M\-A\-X\-L\-I\-N\-E@{M\-A\-X\-L\-I\-N\-E}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{M\-A\-X\-L\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-L\-I\-N\-E~4096}}\label{p3submit_2mydash_8h_a3e937c42922f7601edb17b747602c471}
+
+
+\subsection{Function Documentation}
+\hypertarget{p3submit_2mydash_8h_a0d5c1d0102995d5cd6d2a494dc85f069}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!change\-Dir@{change\-Dir}}
+\index{change\-Dir@{change\-Dir}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{change\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}void change\-Dir (
+\begin{DoxyParamCaption}
+\item[{struct passwd $\ast$}]{pwuid, }
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{char $\ast$}]{dir}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a0d5c1d0102995d5cd6d2a494dc85f069}
+\hypertarget{p3submit_2mydash_8h_aa99a289bfe888ffce0d76d531146b6bf}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!equals@{equals}}
+\index{equals@{equals}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}int equals (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{obj, }
+\item[{const void $\ast$}]{other}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_aa99a289bfe888ffce0d76d531146b6bf}
+\hypertarget{p3submit_2mydash_8h_a7149c6edbf0dd6d1da7f786d62133d16}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!err\-\_\-dump@{err\-\_\-dump}}
+\index{err\-\_\-dump@{err\-\_\-dump}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{err\-\_\-dump}]{\setlength{\rightskip}{0pt plus 5cm}void err\-\_\-dump (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a7149c6edbf0dd6d1da7f786d62133d16}
+\hypertarget{p3submit_2mydash_8h_a5527eeda10156ad7dd2e3dbb92fa70dd}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!err\-\_\-msg@{err\-\_\-msg}}
+\index{err\-\_\-msg@{err\-\_\-msg}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{err\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void err\-\_\-msg (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a5527eeda10156ad7dd2e3dbb92fa70dd}
+\hypertarget{p3submit_2mydash_8h_a856c1e55e117fb3d1488ca121ef7f9c6}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!err\-\_\-quit@{err\-\_\-quit}}
+\index{err\-\_\-quit@{err\-\_\-quit}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{err\-\_\-quit}]{\setlength{\rightskip}{0pt plus 5cm}void err\-\_\-quit (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a856c1e55e117fb3d1488ca121ef7f9c6}
+\hypertarget{p3submit_2mydash_8h_a98255ebf2a46056076b0ab6e86e39d37}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!err\-\_\-ret@{err\-\_\-ret}}
+\index{err\-\_\-ret@{err\-\_\-ret}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{err\-\_\-ret}]{\setlength{\rightskip}{0pt plus 5cm}void err\-\_\-ret (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a98255ebf2a46056076b0ab6e86e39d37}
+\hypertarget{p3submit_2mydash_8h_a6c692d7c47e9845a3b8ac557d9edb3bd}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!err\-\_\-sys@{err\-\_\-sys}}
+\index{err\-\_\-sys@{err\-\_\-sys}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{err\-\_\-sys}]{\setlength{\rightskip}{0pt plus 5cm}void err\-\_\-sys (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a6c692d7c47e9845a3b8ac557d9edb3bd}
+\hypertarget{p3submit_2mydash_8h_a5283309fc25706a60c6d38c80e315970}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!free\-Object@{free\-Object}}
+\index{free\-Object@{free\-Object}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{free\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Object (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a5283309fc25706a60c6d38c80e315970}
+\hypertarget{p3submit_2mydash_8h_a7d9f284c04008b2f6ba03da29c329b7d}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!generate\-Prompt@{generate\-Prompt}}
+\index{generate\-Prompt@{generate\-Prompt}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{generate\-Prompt}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ generate\-Prompt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a7d9f284c04008b2f6ba03da29c329b7d}
+\hypertarget{p3submit_2mydash_8h_a0e33dae31e456526bb0649ec614424ba}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!is\-Empty\-Command@{is\-Empty\-Command}}
+\index{is\-Empty\-Command@{is\-Empty\-Command}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{is\-Empty\-Command}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Empty\-Command (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a0e33dae31e456526bb0649ec614424ba}
+\hypertarget{p3submit_2mydash_8h_aa2d345dda450a6fe9178fe7be1925dd6}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!parse@{parse}}
+\index{parse@{parse}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void parse (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input, }
+\item[{int $\ast$}]{background, }
+\item[{char $\ast$}]{args\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_aa2d345dda450a6fe9178fe7be1925dd6}
+\hypertarget{p3submit_2mydash_8h_ace4d96293e7eb7775bbdf09ac251b327}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!parse\-Ampersand@{parse\-Ampersand}}
+\index{parse\-Ampersand@{parse\-Ampersand}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{parse\-Ampersand}]{\setlength{\rightskip}{0pt plus 5cm}int parse\-Ampersand (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_ace4d96293e7eb7775bbdf09ac251b327}
+\hypertarget{p3submit_2mydash_8h_ad9906809ff4d9f1d6b583a57c7757578}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!parse\-Input@{parse\-Input}}
+\index{parse\-Input@{parse\-Input}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{parse\-Input}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ parse\-Input (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{char $\ast$}]{delimiter, }
+\item[{int $\ast$}]{num\-Tokens}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_ad9906809ff4d9f1d6b583a57c7757578}
+
+
+Parse a given string into tokens using provide delimiters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the string to parse \\
+\hline
+{\em delimiter} & a string of delimiters to use for tokenizing \\
+\hline
+{\em num\-Tokens} & updates to number of toeksn found in the input string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to an array of tokens that must be freed by the caller 
+\end{DoxyReturn}
+\hypertarget{p3submit_2mydash_8h_ae23098c009c74791925468628dc98022}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!print\-All\-Jobs@{print\-All\-Jobs}}
+\index{print\-All\-Jobs@{print\-All\-Jobs}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{print\-All\-Jobs}]{\setlength{\rightskip}{0pt plus 5cm}void print\-All\-Jobs (
+\begin{DoxyParamCaption}
+\item[{int}]{flag, }
+\item[{struct list $\ast$}]{jobs}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_ae23098c009c74791925468628dc98022}
+\hypertarget{p3submit_2mydash_8h_a69f1a01af1a62604f48ea00b42cdd2f2}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!print\-History@{print\-History}}
+\index{print\-History@{print\-History}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{print\-History}]{\setlength{\rightskip}{0pt plus 5cm}void print\-History (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a69f1a01af1a62604f48ea00b42cdd2f2}
+\hypertarget{p3submit_2mydash_8h_ad435e875f9b06471147f018f4168bb11}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!print\-Jobs@{print\-Jobs}}
+\index{print\-Jobs@{print\-Jobs}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{print\-Jobs}]{\setlength{\rightskip}{0pt plus 5cm}void print\-Jobs (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{pid, }
+\item[{char $\ast$}]{running, }
+\item[{char $\ast$}]{cmd}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_ad435e875f9b06471147f018f4168bb11}
+\hypertarget{p3submit_2mydash_8h_a0c216e899ddb3dfbbaf8e261670cf80c}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!remove\-White\-Space@{remove\-White\-Space}}
+\index{remove\-White\-Space@{remove\-White\-Space}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{remove\-White\-Space}]{\setlength{\rightskip}{0pt plus 5cm}void remove\-White\-Space (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a0c216e899ddb3dfbbaf8e261670cf80c}
+\hypertarget{p3submit_2mydash_8h_a80dc57d5db2a940022eeae60452339ee}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!run@{run}}
+\index{run@{run}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void run (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{char $\ast$}]{input, }
+\item[{struct list $\ast$}]{jobs, }
+\item[{int $\ast$}]{background, }
+\item[{int $\ast$}]{next\-I\-D, }
+\item[{pid\-\_\-t}]{pg\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a80dc57d5db2a940022eeae60452339ee}
+\hypertarget{p3submit_2mydash_8h_a0c88efa38e3ca069ad715ac5fbb7baed}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!run\-Built\-Ins@{run\-Built\-Ins}}
+\index{run\-Built\-Ins@{run\-Built\-Ins}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{run\-Built\-Ins}]{\setlength{\rightskip}{0pt plus 5cm}void run\-Built\-Ins (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{struct list $\ast$}]{jobs, }
+\item[{struct passwd $\ast$}]{pwuid}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a0c88efa38e3ca069ad715ac5fbb7baed}
+\hypertarget{p3submit_2mydash_8h_a138f2c50e10d96e95ce6ea4281777227}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!signal\-Handler@{signal\-Handler}}
+\index{signal\-Handler@{signal\-Handler}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{signal\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void signal\-Handler (
+\begin{DoxyParamCaption}
+\item[{int}]{signo}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a138f2c50e10d96e95ce6ea4281777227}
+\hypertarget{p3submit_2mydash_8h_a3202eb396cd2330f7da21b3e7a57015b}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!sigsetjmp@{sigsetjmp}}
+\index{sigsetjmp@{sigsetjmp}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{sigsetjmp}]{\setlength{\rightskip}{0pt plus 5cm}int sigsetjmp (
+\begin{DoxyParamCaption}
+\item[{sigjmp\-\_\-buf}]{env, }
+\item[{int}]{savemask}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a3202eb396cd2330f7da21b3e7a57015b}
+\hypertarget{p3submit_2mydash_8h_a3c2b7655dfda066cd088c4f1016dd8f5}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ to\-String (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a3c2b7655dfda066cd088c4f1016dd8f5}
+\hypertarget{p3submit_2mydash_8h_a2318f5410e5b886031286df143719636}{\index{p3submit/mydash.\-h@{p3submit/mydash.\-h}!version@{version}}
+\index{version@{version}!p3submit/mydash.h@{p3submit/mydash.\-h}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}void version (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{p3submit_2mydash_8h_a2318f5410e5b886031286df143719636}

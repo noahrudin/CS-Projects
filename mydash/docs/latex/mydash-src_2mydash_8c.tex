@@ -1,0 +1,210 @@
+\hypertarget{mydash-src_2mydash_8c}{\section{mydash-\/src/mydash.c File Reference}
+\label{mydash-src_2mydash_8c}\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}}
+}
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$sys/wait.\-h$>$}\\*
+{\ttfamily \#include $<$mydash.\-h$>$}\\*
+{\ttfamily \#include $<$setjmp.\-h$>$}\\*
+{\ttfamily \#include $<$readline/readline.\-h$>$}\\*
+{\ttfamily \#include $<$readline/history.\-h$>$}\\*
+{\ttfamily \#include $<$signal.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$pwd.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}../../list/include/\-Node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../list/include/\-List.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{mydash-src_2mydash_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{mydash-src_2mydash_8c_a0c88efa38e3ca069ad715ac5fbb7baed}{run\-Built\-Ins} (char $\ast$$\ast$argv, struct list $\ast$\hyperlink{p3submit_2mydash_8c_a7fbf7d423751525b8391d5e19d2f77d4}{jobs}, struct passwd $\ast$pwuid)
+\item 
+void \hyperlink{mydash-src_2mydash_8c_a80dc57d5db2a940022eeae60452339ee}{run} (char $\ast$$\ast$argv, char $\ast$input, struct list $\ast$\hyperlink{p3submit_2mydash_8c_a7fbf7d423751525b8391d5e19d2f77d4}{jobs}, int $\ast$background, int $\ast$next\-I\-D, pid\-\_\-t pg\-I\-D)
+\item 
+void \hyperlink{mydash-src_2mydash_8c_ae23098c009c74791925468628dc98022}{print\-All\-Jobs} (int flag, struct list $\ast$\hyperlink{p3submit_2mydash_8c_a7fbf7d423751525b8391d5e19d2f77d4}{jobs})
+\item 
+void \hyperlink{mydash-src_2mydash_8c_ad435e875f9b06471147f018f4168bb11}{print\-Jobs} (int id, int pid, char $\ast$running, char $\ast$cmd)
+\item 
+void \hyperlink{mydash-src_2mydash_8c_a0d5c1d0102995d5cd6d2a494dc85f069}{change\-Dir} (struct passwd $\ast$pwuid, char $\ast$$\ast$argv, char $\ast$dir)
+\item 
+void \hyperlink{mydash-src_2mydash_8c_a69f1a01af1a62604f48ea00b42cdd2f2}{print\-History} (void)
+\item 
+int \hyperlink{mydash-src_2mydash_8c_a0e33dae31e456526bb0649ec614424ba}{is\-Empty\-Command} (char $\ast$input)
+\item 
+void \hyperlink{mydash-src_2mydash_8c_afea8b0662566f524f589c722e22a1921}{remove\-White\-Space} (char $\ast$in)
+\item 
+int \hyperlink{mydash-src_2mydash_8c_ace4d96293e7eb7775bbdf09ac251b327}{parse\-Ampersand} (char $\ast$in)
+\item 
+void \hyperlink{mydash-src_2mydash_8c_aa2d345dda450a6fe9178fe7be1925dd6}{parse} (char $\ast$input, int $\ast$background, char $\ast$args\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{mydash-src_2mydash_8c_a2318f5410e5b886031286df143719636}{version} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{mydash-src_2mydash_8c_aa99a289bfe888ffce0d76d531146b6bf}{equals} (const void $\ast$obj, const void $\ast$other)
+\item 
+char $\ast$ \hyperlink{mydash-src_2mydash_8c_a3c2b7655dfda066cd088c4f1016dd8f5}{to\-String} (const void $\ast$obj)
+\item 
+void \hyperlink{mydash-src_2mydash_8c_a5283309fc25706a60c6d38c80e315970}{free\-Object} (void $\ast$obj)
+\item 
+char $\ast$ \hyperlink{mydash-src_2mydash_8c_a7d9f284c04008b2f6ba03da29c329b7d}{generate\-Prompt} (void)
+\item 
+void \hyperlink{mydash-src_2mydash_8c_a138f2c50e10d96e95ce6ea4281777227}{signal\-Handler} (int signo)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct list $\ast$ \hyperlink{mydash-src_2mydash_8c_a7fbf7d423751525b8391d5e19d2f77d4}{jobs}
+\item 
+sigjmp\-\_\-buf \hyperlink{mydash-src_2mydash_8c_a1ae1284ab20fc1715106394255853806}{S\-I\-G\-I\-N\-T\-\_\-\-B\-U\-F}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{mydash-src_2mydash_8c_a0d5c1d0102995d5cd6d2a494dc85f069}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!change\-Dir@{change\-Dir}}
+\index{change\-Dir@{change\-Dir}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{change\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}void change\-Dir (
+\begin{DoxyParamCaption}
+\item[{struct passwd $\ast$}]{pwuid, }
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{char $\ast$}]{dir}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a0d5c1d0102995d5cd6d2a494dc85f069}
+\hypertarget{mydash-src_2mydash_8c_aa99a289bfe888ffce0d76d531146b6bf}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!equals@{equals}}
+\index{equals@{equals}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}int equals (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{obj, }
+\item[{const void $\ast$}]{other}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_aa99a289bfe888ffce0d76d531146b6bf}
+\hypertarget{mydash-src_2mydash_8c_a5283309fc25706a60c6d38c80e315970}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!free\-Object@{free\-Object}}
+\index{free\-Object@{free\-Object}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{free\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Object (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a5283309fc25706a60c6d38c80e315970}
+\hypertarget{mydash-src_2mydash_8c_a7d9f284c04008b2f6ba03da29c329b7d}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!generate\-Prompt@{generate\-Prompt}}
+\index{generate\-Prompt@{generate\-Prompt}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{generate\-Prompt}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ generate\-Prompt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a7d9f284c04008b2f6ba03da29c329b7d}
+\hypertarget{mydash-src_2mydash_8c_a0e33dae31e456526bb0649ec614424ba}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!is\-Empty\-Command@{is\-Empty\-Command}}
+\index{is\-Empty\-Command@{is\-Empty\-Command}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{is\-Empty\-Command}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Empty\-Command (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a0e33dae31e456526bb0649ec614424ba}
+\hypertarget{mydash-src_2mydash_8c_a3c04138a5bfe5d72780bb7e82a18e627}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!main@{main}}
+\index{main@{main}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+\hypertarget{mydash-src_2mydash_8c_aa2d345dda450a6fe9178fe7be1925dd6}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!parse@{parse}}
+\index{parse@{parse}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void parse (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input, }
+\item[{int $\ast$}]{background, }
+\item[{char $\ast$}]{args\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_aa2d345dda450a6fe9178fe7be1925dd6}
+\hypertarget{mydash-src_2mydash_8c_ace4d96293e7eb7775bbdf09ac251b327}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!parse\-Ampersand@{parse\-Ampersand}}
+\index{parse\-Ampersand@{parse\-Ampersand}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{parse\-Ampersand}]{\setlength{\rightskip}{0pt plus 5cm}int parse\-Ampersand (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_ace4d96293e7eb7775bbdf09ac251b327}
+\hypertarget{mydash-src_2mydash_8c_ae23098c009c74791925468628dc98022}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!print\-All\-Jobs@{print\-All\-Jobs}}
+\index{print\-All\-Jobs@{print\-All\-Jobs}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{print\-All\-Jobs}]{\setlength{\rightskip}{0pt plus 5cm}void print\-All\-Jobs (
+\begin{DoxyParamCaption}
+\item[{int}]{flag, }
+\item[{struct list $\ast$}]{jobs}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_ae23098c009c74791925468628dc98022}
+\hypertarget{mydash-src_2mydash_8c_a69f1a01af1a62604f48ea00b42cdd2f2}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!print\-History@{print\-History}}
+\index{print\-History@{print\-History}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{print\-History}]{\setlength{\rightskip}{0pt plus 5cm}void print\-History (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a69f1a01af1a62604f48ea00b42cdd2f2}
+\hypertarget{mydash-src_2mydash_8c_ad435e875f9b06471147f018f4168bb11}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!print\-Jobs@{print\-Jobs}}
+\index{print\-Jobs@{print\-Jobs}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{print\-Jobs}]{\setlength{\rightskip}{0pt plus 5cm}void print\-Jobs (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{pid, }
+\item[{char $\ast$}]{running, }
+\item[{char $\ast$}]{cmd}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_ad435e875f9b06471147f018f4168bb11}
+\hypertarget{mydash-src_2mydash_8c_afea8b0662566f524f589c722e22a1921}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!remove\-White\-Space@{remove\-White\-Space}}
+\index{remove\-White\-Space@{remove\-White\-Space}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{remove\-White\-Space}]{\setlength{\rightskip}{0pt plus 5cm}void remove\-White\-Space (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_afea8b0662566f524f589c722e22a1921}
+\hypertarget{mydash-src_2mydash_8c_a80dc57d5db2a940022eeae60452339ee}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!run@{run}}
+\index{run@{run}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void run (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{char $\ast$}]{input, }
+\item[{struct list $\ast$}]{jobs, }
+\item[{int $\ast$}]{background, }
+\item[{int $\ast$}]{next\-I\-D, }
+\item[{pid\-\_\-t}]{pg\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a80dc57d5db2a940022eeae60452339ee}
+\hypertarget{mydash-src_2mydash_8c_a0c88efa38e3ca069ad715ac5fbb7baed}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!run\-Built\-Ins@{run\-Built\-Ins}}
+\index{run\-Built\-Ins@{run\-Built\-Ins}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{run\-Built\-Ins}]{\setlength{\rightskip}{0pt plus 5cm}void run\-Built\-Ins (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{struct list $\ast$}]{jobs, }
+\item[{struct passwd $\ast$}]{pwuid}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a0c88efa38e3ca069ad715ac5fbb7baed}
+\hypertarget{mydash-src_2mydash_8c_a138f2c50e10d96e95ce6ea4281777227}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!signal\-Handler@{signal\-Handler}}
+\index{signal\-Handler@{signal\-Handler}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{signal\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void signal\-Handler (
+\begin{DoxyParamCaption}
+\item[{int}]{signo}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a138f2c50e10d96e95ce6ea4281777227}
+\hypertarget{mydash-src_2mydash_8c_a3c2b7655dfda066cd088c4f1016dd8f5}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ to\-String (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a3c2b7655dfda066cd088c4f1016dd8f5}
+\hypertarget{mydash-src_2mydash_8c_a2318f5410e5b886031286df143719636}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!version@{version}}
+\index{version@{version}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}void version (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{mydash-src_2mydash_8c_a2318f5410e5b886031286df143719636}
+
+
+\subsection{Variable Documentation}
+\hypertarget{mydash-src_2mydash_8c_a7fbf7d423751525b8391d5e19d2f77d4}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!jobs@{jobs}}
+\index{jobs@{jobs}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{jobs}]{\setlength{\rightskip}{0pt plus 5cm}struct list$\ast$ jobs}}\label{mydash-src_2mydash_8c_a7fbf7d423751525b8391d5e19d2f77d4}
+\hypertarget{mydash-src_2mydash_8c_a1ae1284ab20fc1715106394255853806}{\index{mydash-\/src/mydash.\-c@{mydash-\/src/mydash.\-c}!S\-I\-G\-I\-N\-T\-\_\-\-B\-U\-F@{S\-I\-G\-I\-N\-T\-\_\-\-B\-U\-F}}
+\index{S\-I\-G\-I\-N\-T\-\_\-\-B\-U\-F@{S\-I\-G\-I\-N\-T\-\_\-\-B\-U\-F}!mydash-src/mydash.c@{mydash-\/src/mydash.\-c}}
+\subsubsection[{S\-I\-G\-I\-N\-T\-\_\-\-B\-U\-F}]{\setlength{\rightskip}{0pt plus 5cm}sigjmp\-\_\-buf S\-I\-G\-I\-N\-T\-\_\-\-B\-U\-F}}\label{mydash-src_2mydash_8c_a1ae1284ab20fc1715106394255853806}

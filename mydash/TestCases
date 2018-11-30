@@ -1,0 +1,189 @@
+#
+#An incomplete list of test cases, added on by Noah Rudin
+#
+
+#####Test1
+exit
+#####
+
+
+#####Test2
+<Ctrl>-d
+#####
+
+
+#####Test3
+#test for empty and blank commands
+
+
+exit
+#####
+
+#####Test4
+mydash -v
+#####
+
+
+#####Test5
+export DASH_PROMPT="myprompt:"
+mydash
+exit
+#####
+
+
+#####Test6
+ls
+date
+ls -l -t -t -l
+exit
+#####
+
+
+#####Test7
+vim
+gvim
+exit
+
+
+#####Test8
+cd
+pwd
+cd /tmp
+pwd
+cd /home/amit/workspace/mydash/mydash-src/
+pwd
+cd jfdkjfdjfd
+exit
+#####
+
+#####Test9
+#blank cd with no argument
+cd
+#####
+
+#####Test10
+#random input
+asuhdoaiwhoaihgoaiehfoauihosijaoisjdcoafasdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddasuhdoaiwhoaihgoaiehfoauihosijaoisjdcoafasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+#####
+
+#####Test11
+#many flags
+ls -a -s -d -f -g
+#####
+
+#####Test12
+#invalid directory
+cd /2987y3has/
+#####
+
+#####Test13
+#more extensive vim test
+vim test.txt
+<Ctrl-Z-Z>
+vim test.txt
+#####
+
+#####Test14
+#non string arguments
+./mydash 12093u05
+#####
+
+#####Test15
+#non string inputs
+12094
+@#(!)
+#####
+
+#####Test16
+#force quit
+<Ctrl-C>
+#####
+
+#####Test17
+#pwd test
+pwd pwd pwd
+pwd
+#####
+
+#####Test18
+#more ls commands
+ls -a
+ls -la
+ls -lh
+#####
+
+#####Test19
+#cat
+cat README.md
+#####
+
+#####Test20
+#make folder
+mkdir folder
+#####
+
+#####Test21
+#remove folder
+rm -rf folder
+#####
+
+#####Test22
+#background ls
+ls&
+#####
+
+#####Test23
+#background ls w/space
+ls &
+#####
+
+#####Test24
+#background cd ..
+cd ..&
+#####
+
+#####Test25
+#output jobs
+jobs
+#####
+
+#####Test25
+#output jobs
+jobs
+#####
+
+#####Test26
+#output jobs list
+jobs
+#####
+
+#####Test27
+#background sleep
+sleep 10&
+#####
+
+#####Test28
+#sleep for 10, kill process
+sleep 10
+^Z
+#####
+
+#####Test29
+#background jobs
+jobs&
+#####
+
+#####Test30
+#background kwrite
+kwrite&
+#####
+
+#####Test31
+#make
+make
+#####
+
+#####Test32
+#fresh prompt
+^C
+#####
