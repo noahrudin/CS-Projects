@@ -10,5 +10,4 @@
 - README.md: This File
 - ring-buffer: Thread-Safe Ring Buffer Project
 - ShuttleCompanion: Android Application to Aid Boise State Students and Staff on the Shuttle System
-- website: Noah Rudin Website
 - word-count: Word Counter and String Match Program
