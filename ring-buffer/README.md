@@ -1,16 +1,16 @@
-Project 6: Ring Buffer
+# Ring Buffer
 Author: Noah Rudin
 CS253 Section 2
 Fall 2017
 
--OVERVIEW-
+## OVERVIEW
 
 This project requires the student to make a ring buffer, which handles size 
 issues when writing to an array while reading from memory. This programming 
 assignment requires the programmer to refine skills such as signals, pointers, 
 file operations, and general coding practices.
 
--COMPILING AND USING- *STRAIGHT FROM ASSIGNMENT DESCRIPTION*
+## COMPILING AND USING
 
 To run the test programs you will need to set the paths to find the library:
 
@@ -37,7 +37,7 @@ To run the autograder before submitting, run:
 ```
 
 
--TESTING-
+## TESTING
 
 The majority of testing was done via the grading scripts provided within 
 C-examples. I used these scripts to tweak different issues I had concerning the 
@@ -45,7 +45,7 @@ ring buffer. One issue that I had the most trouble with was the alarm signal,
 and setting the flag init to true and false. I remedied this by doing a check 
 within my dump_buffer method to set init to false if it wasn't.
 
--SOURCES USED-
+## SOURCES USED
 
 -Worked with Farhad and classmates (Spencer Saunders and Davis Plumlee)
 
@@ -54,6 +54,6 @@ within my dump_buffer method to set init to false if it wasn't.
 -Lemoda for setting and getting environment vars
 https://www.lemoda.net/c/set-get-env/
 
--KNOWN ISSUES AND BUGS-
+## KNOWN ISSUES AND BUGS
 
 There are no known errors in this code.
