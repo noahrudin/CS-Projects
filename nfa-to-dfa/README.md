@@ -1,4 +1,4 @@
-# Project 1 Part 2: NFA to DFA
+# NFA to DFA
 
 * Author: Noah Rudin, Bryant Barreto
 * Class: CS361 Section 2
